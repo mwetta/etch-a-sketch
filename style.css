@@ -1,0 +1,28 @@
+body {
+    background: salmon;
+    display: flex;
+    justify-content: center;
+}
+
+#container {
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    display: flex;
+}
+
+.block {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    height: 100%;
+    width: 25%;
+    flex: 1 0 0;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.block .col {
+    height: 25%;
+    width: 100%;
+}
