@@ -22,7 +22,11 @@ body {
     flex-wrap: wrap;
 }
 
-.block .col {
+.block-col {
+    margin: 0px;
+    padding: 0px;
     height: 25%;
     width: 100%;
+    flex: 1 0 0;
+    /* add on hover here */
 }

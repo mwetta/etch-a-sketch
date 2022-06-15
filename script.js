@@ -30,16 +30,23 @@ Add a button to the top of the screen that will send the user a popup asking for
 Push your project to GitHub!
 */
 
+const container = document.querySelector('#container');
+let gridSize = 16; //default
+
 /*
+button.onclick/event listener
+    gridSize = prompt('What size grid?', '');*/
 
-gridSize = 16;
+    for (let i = 0; i < gridSize; i++){
+        let block = document.createElement('div');
+        block.setAttribute('id',`block-${i}`);
+        block.classList.add('block');
+        container.appendChild(block);
 
-gridSize = prompt('What size grid?', '');
-
-    for loop
-        create element
-        append element to parent
-        add element class -- in CSS
-
-
-*/
+        for (let i = 0; i < gridSize; i++){
+            let column = document.createElement('div');
+            column.setAttribute('id',`column-${i}`);
+            column.classList.add('block-col');
+            block.appendChild(column);
+        };
+    };
