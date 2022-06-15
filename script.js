@@ -32,21 +32,28 @@ Push your project to GitHub!
 
 const container = document.querySelector('#container');
 let gridSize = 16; //default
+resizeGrid(16);
 
-/*
-button.onclick/event listener
-    gridSize = prompt('What size grid?', '');*/
+document.querySelector('#button').addEventListener('click', function() {
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+      };
+    gridSize = prompt("What Size Grid?,''");
+    resizeGrid(gridSize);
+});
 
+function resizeGrid(gridSize) {
     for (let i = 0; i < gridSize; i++){
-        let block = document.createElement('div');
-        block.setAttribute('id',`block-${i}`);
-        block.classList.add('block');
-        container.appendChild(block);
+        let column = document.createElement('div');
+        column.setAttribute('id',`column-${i}`);
+        column.classList.add('column');
+        container.appendChild(column);
 
-        for (let i = 0; i < gridSize; i++){
-            let column = document.createElement('div');
-            column.setAttribute('id',`column-${i}`);
-            column.classList.add('block-col');
-            block.appendChild(column);
+        for (let c = 0; c < gridSize; c++){
+            let block = document.createElement('div');
+            block.setAttribute('id',`block-${i}`);
+            block.classList.add('block');
+            column.appendChild(block);
         };
     };
+}

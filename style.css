@@ -11,7 +11,7 @@ body {
     display: flex;
 }
 
-.block {
+.column {
     margin: 0px;
     padding: 0px;
     display: flex;
@@ -22,7 +22,7 @@ body {
     flex-wrap: wrap;
 }
 
-.block-col {
+.block {
     margin: 0px;
     padding: 0px;
     height: 25%;
