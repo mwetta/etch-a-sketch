@@ -11,13 +11,24 @@
 </head>
 
 <body>
-    <div id="menu">
-        <button id="button">Change Grid Size</button>
-        <button id="reset">Reset</button>
+
+    <div id="header">
+        <h1>Etch-a-Sketch</h1>
+    </div>
+    <div id="wrap">
+        <div id="menu">
+            <form>
+                <input type="range" id="sizeRange" name="sizeRange" min="0" max="100" value="16"
+                    oninput="this.form.sizeInput.value=this.value" />
+                <input type="number" id="sizeInput" name="sizeInput" min="0" max="100" value="16"
+                    oninput="this.form.sizeRange.value=this.value" />
+            </form>
+            <button id="reset">Reset</button>
+        </div>
+        <div id="container">
+        </div>
     </div>
 
-    <div id="container">
-    </div>
 
 
 </body>

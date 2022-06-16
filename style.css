@@ -1,14 +1,18 @@
 body {
-    background: salmon;
+    background: white;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif
 }
 
 #container {
     width: 400px;
     height: 400px;
-    background-color: white;
+    margin: 10px;
+    background: white;
     display: flex;
+    filter: drop-shadow(0 0 0.75rem black);
 }
 
 .column {
@@ -26,7 +30,6 @@ body {
     padding: 0px;
     width: 100%;
     flex: 1 0 0;
-    /* add on hover here */
 }
 
 .draw {
@@ -34,5 +37,43 @@ body {
 }
 
 #menu {
+    display: flex;
+    flex-direction: column;
     margin: 10px;
+}
+
+button {
+    padding: 5px;
+    margin: 10px;
+}
+
+#wrap {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type=number] {
+    font-size: large;
+    margin: 8px 0;
+    border: none;
+    text-align: center;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
 }
