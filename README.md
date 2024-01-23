@@ -3,7 +3,7 @@
 ## Description
 A basic etch-a-sketch developed as part of my early days completing The Odin Project.  
 
-# Future optimizations
+## Future optimizations
 - A color picker
 - A click-to-draw interface
 - Optimized code
